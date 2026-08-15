@@ -26,7 +26,7 @@ establish its baseline capabilities before changing drivers or configuration.
 The interface and MAC address are partially anonymized because this is a public
 repository.
 
-##  USB Identification
+## USB Identification
 
 The adapter was identified using:
 
