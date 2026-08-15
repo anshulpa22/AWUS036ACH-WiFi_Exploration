@@ -28,7 +28,7 @@ the Alfa Network AWUS036ACH USB Wi-Fi adapter.
 
 | Lab | Topic | Status |
 |---|---|---|
-| 00 | Hardware overview | Not started |
+| 00 | Hardware overview | Completed |
 | 01 | Driver installation and verification | Not started |
 | 02 | Linux Wi-Fi interface management | Not started |
 | 03 | Channel scanning and network discovery | Not started |

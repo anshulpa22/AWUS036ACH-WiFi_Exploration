@@ -6,15 +6,15 @@ exploration labs.
 ## Progress Summary
 
 - Total labs: 13
-- Completed: 0
+- Completed: 1
 - In progress: 0
-- Overall progress: 0%
+- Overall progress: 8%
 
 ## Lab Tracker
 
 | Lab | Topic | Status | Completion Date | Key Outcome |
 |---|---|---|---|---|
-| 00 | Hardware overview | Not started | — | — |
+| 00 | Hardware overview | 2026-08-15 | Identified RTL8812AU, USB 3.x link, rtw88 driver and supported modes |
 | 01 | Driver installation | Not started | — | — |
 | 02 | Interface management | Not started | — | — |
 | 03 | Channel scanning | Not started | — | — |
@@ -39,3 +39,11 @@ exploration labs.
 
 Important findings, unexpected behaviour and decisions will be summarized here
 as the labs progress.
+
+### 2026-08-15 — Lab 00
+
+The AWUS036ACH was detected as USB device `0bda:8812` and negotiated a 5000M
+USB link. Ubuntu loaded the in-kernel `rtw88_8812au` driver. Managed, AP and
+monitor modes were advertised, but mesh-point mode was not. The adapter follows
+the global regulatory domain, which was temporarily changed from the world
+domain to the UAE `AE` domain for compliant local testing.
