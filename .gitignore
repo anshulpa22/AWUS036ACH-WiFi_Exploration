@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Packet captures may contain sensitive information
+*.pcap
+*.pcapng
+*.cap
+
+# Raw experimental data
+results/raw/
+**/results/raw/
+
+# Temporary logs
+*.log
+*.tmp
+*.swp
+*~
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/

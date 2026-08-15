@@ -1,0 +1,41 @@
+# Learning Progress
+
+This page tracks the completion and key outcomes of the AWUS036ACH Wi-Fi
+exploration labs.
+
+## Progress Summary
+
+- Total labs: 13
+- Completed: 0
+- In progress: 0
+- Overall progress: 0%
+
+## Lab Tracker
+
+| Lab | Topic | Status | Completion Date | Key Outcome |
+|---|---|---|---|---|
+| 00 | Hardware overview | Not started | — | — |
+| 01 | Driver installation | Not started | — | — |
+| 02 | Interface management | Not started | — | — |
+| 03 | Channel scanning | Not started | — | — |
+| 04 | RSSI experiments | Not started | — | — |
+| 05 | Throughput testing | Not started | — | — |
+| 06 | Monitor mode | Not started | — | — |
+| 07 | 802.11s mesh | Not started | — | — |
+| 08 | BATMAN-adv | Not started | — | — |
+| 09 | Long-range testing | Not started | — | — |
+| 10 | Wi-Fi security | Not started | — | — |
+| 11 | Python automation | Not started | — | — |
+| 12 | Final project | Not started | — | — |
+
+## Status Definitions
+
+- **Not started:** No experimental work has begun.
+- **In progress:** Theory or experimentation is underway.
+- **Completed:** Procedure, results and conclusions are documented.
+- **Blocked:** Progress depends on unresolved hardware or software issues.
+
+## Learning Journal
+
+Important findings, unexpected behaviour and decisions will be summarized here
+as the labs progress.
