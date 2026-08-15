@@ -6,16 +6,16 @@ exploration labs.
 ## Progress Summary
 
 - Total labs: 13
-- Completed: 1
+- Completed: 2
 - In progress: 0
-- Overall progress: 8%
+- Overall progress: 15%
 
 ## Lab Tracker
 
 | Lab | Topic | Status | Completion Date | Key Outcome |
 |---|---|---|---|---|
 | 00 | Hardware overview | Completed | 2026-08-15 | Identified RTL8812AU, USB 3.x link, rtw88 driver and supported modes |
-| 01 | Driver installation | Not started | — | — |
+| 01 | Driver installation | Completed | 2026-08-15 | Verified in-kernel driver stack, firmware, USB binding and clean module reload |
 | 02 | Interface management | Not started | — | — |
 | 03 | Channel scanning | Not started | — | — |
 | 04 | RSSI experiments | Not started | — | — |
@@ -47,3 +47,11 @@ USB link. Ubuntu loaded the in-kernel `rtw88_8812au` driver. Managed, AP and
 monitor modes were advertised, but mesh-point mode was not. The adapter follows
 the global regulatory domain, which was temporarily changed from the world
 domain to the UAE `AE` domain for compliant local testing.
+
+### 2026-08-15 — Lab 01
+
+The in-kernel `rtw88_8812au` driver was verified from USB modalias matching
+through firmware initialization. No conflicting Realtek DKMS module was
+installed. Firmware `52.14.0` initialized successfully, USB runtime autosuspend
+was disabled and the driver completed a controlled unload/reload test without
+affecting the internal Wi-Fi interface.
