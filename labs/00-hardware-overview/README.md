@@ -30,31 +30,33 @@ repository.
 
 The adapter was identified using:
 
-```bash
-lsusb
+    lsusb
 
-Output
-ID 0bda:8812 Realtek Semiconductor Corp. RTL8812AU
-802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+Output:
+
+    ID 0bda:8812 Realtek Semiconductor Corp. RTL8812AU
+    802.11a/b/g/n/ac 2T2R DB WLAN Adapter
 
 ## USB Link Speed
 
-lsusb -t
+    lsusb -t
 
-Driver=rtw88_8812au, 5000M
+Output:
+
+    Driver=rtw88_8812au, 5000M
 
 ## Driver Identification
 
 The active driver was inspected with:
 
-ethtool -i <interface>
-modinfo rtw88_8812au
+    ethtool -i <interface>
+    modinfo rtw88_8812au
 
 Observed driver:
 
-driver: rtw88_8812au
-version: 6.17.0-40-generic
-firmware-version: N/A
+    driver: rtw88_8812au
+    version: 6.17.0-40-generic
+    firmware-version: N/A
 
 The system is using the in-kernel rtw88_8812au driver. No third-party DKMS
 driver was installed during this lab.
@@ -63,8 +65,8 @@ driver was installed during this lab.
 
 Commands:
 
-iw dev
-ip -brief link
+    iw dev
+    ip -brief link
 
 Two Wi-Fi interfaces were present:
 
@@ -76,10 +78,11 @@ USB reconnection or driver reload.
 
 A PHY should therefore be obtained dynamically:
 
-ALFA_IF=<alfa-interface>
-ALFA_PHY=$(iw dev "$ALFA_IF" info | awk '/wiphy/ {print "phy"$2}')
-echo "$ALFA_PHY"
-5. Supported Interface Modes
+    ALFA_IF=<alfa-interface>
+    ALFA_PHY=$(iw dev "$ALFA_IF" info | awk '/wiphy/ {print "phy"$2}')
+    echo "$ALFA_PHY"
+
+## Supported Interface Modes
 
 The current driver advertised:
 
@@ -107,7 +110,7 @@ depend on the regulatory domain, driver and device capabilities.
 
 Initially, the global regulatory domain was:
 
-country 00: DFS-UNSET
+    country 00: DFS-UNSET
 
 The internal Intel adapter used a self-managed UAE domain, while the Alfa
 adapter followed the global world domain.
@@ -115,15 +118,15 @@ adapter followed the global world domain.
 Because the experiment is being performed in the UAE, the global domain was
 temporarily set using:
 
-sudo iw reg set AE
+    sudo iw reg set AE
 
 Verification:
 
-iw reg get
+    iw reg get
 
 The resulting global domain was:
 
-country AE: DFS-FCC
+    country AE: DFS-FCC
 
 This command applies legal UAE regulatory rules; it is not a mechanism for
 bypassing channel or transmit-power restrictions.

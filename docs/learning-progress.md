@@ -14,7 +14,7 @@ exploration labs.
 
 | Lab | Topic | Status | Completion Date | Key Outcome |
 |---|---|---|---|---|
-| 00 | Hardware overview | 2026-08-15 | Identified RTL8812AU, USB 3.x link, rtw88 driver and supported modes |
+| 00 | Hardware overview | Completed | 2026-08-15 | Identified RTL8812AU, USB 3.x link, rtw88 driver and supported modes |
 | 01 | Driver installation | Not started | — | — |
 | 02 | Interface management | Not started | — | — |
 | 03 | Channel scanning | Not started | — | — |
