@@ -136,9 +136,9 @@ The USB path and power state were checked with:
 USB_PATH=$(basename "$(readlink -f "/sys/class/net/$ALFA_IF/device")" |
     cut -d: -f1)
 
-cat "/sys/bus/usb/devices/$USB_PATH/power/control"
-cat "/sys/bus/usb/devices/$USB_PATH/power/autosuspend"
-cat "/sys/bus/usb/devices/$USB_PATH/speed"
+printf 'control: %s\n' "$(cat "/sys/bus/usb/devices/$USB_PATH/power/control")"
+printf 'autosuspend delay: %s\n' "$(cat "/sys/bus/usb/devices/$USB_PATH/power/autosuspend")"
+printf 'speed: %s\n' "$(cat "/sys/bus/usb/devices/$USB_PATH/speed")"
 ```
 
 Observed values:
