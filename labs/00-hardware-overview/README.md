@@ -86,11 +86,11 @@ A PHY should therefore be obtained dynamically:
 
 The current driver advertised:
 
-IBSS
-Managed
-AP
-AP/VLAN
-Monitor
+- IBSS
+- Managed
+- AP
+- AP/VLAN
+- Monitor
 
 The driver did not advertise mesh point mode. Native 802.11s operation cannot
 therefore be assumed to work with this driver. This will be investigated before
@@ -100,8 +100,8 @@ the 802.11s lab.
 
 The adapter exposed both:
 
-2.4 GHz channels
-5 GHz channels
+- 2.4 GHz channels
+- 5 GHz channels
 
 Channel availability, transmit power and the ability to initiate transmission
 depend on the regulatory domain, driver and device capabilities.
