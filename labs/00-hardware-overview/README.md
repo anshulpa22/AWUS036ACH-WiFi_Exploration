@@ -70,8 +70,8 @@ Commands:
 
 Two Wi-Fi interfaces were present:
 
-The internal Intel adapter was connected to the existing WLAN.
-The Alfa adapter was present in managed mode but was not associated.
+- The internal Intel adapter was connected to the existing WLAN.
+- The Alfa adapter was present in managed mode but was not associated.
 
 A PHY number such as phy8 or phy10 is not permanent. It can change after a
 USB reconnection or driver reload.
