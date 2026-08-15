@@ -136,12 +136,13 @@ The Alfa adapter continued to report 20 dBm as its maximum setting. Several
 driver or device limitation that requires further investigation.
 
 ## Key Findings
-The AWUS036ACH was detected as a Realtek RTL8812AU device.
-It operated at USB 3.x SuperSpeed (5000M).
-Ubuntu used the in-kernel rtw88_8812au driver.
-Managed, AP and monitor modes were advertised.
-Native 802.11s mesh-point mode was not advertised.
-PHY numbers changed after re-enumeration and must not be hard-coded.
-The adapter followed the global regulatory domain rather than the internal
-Intel adapter's self-managed domain.
-Regulatory and device limits must be respected during all RF experiments.
+
+- The AWUS036ACH was detected as a Realtek RTL8812AU device.
+- It operated at USB 3.x SuperSpeed (5000M).
+- Ubuntu used the in-kernel rtw88_8812au driver.
+- Managed, AP and monitor modes were advertised.
+- Native 802.11s mesh-point mode was not advertised.
+- PHY numbers changed after re-enumeration and must not be hard-coded.
+- The adapter followed the global regulatory domain rather than the internal
+  Intel adapter's self-managed domain.
+- Regulatory and device limits must be respected during all RF experiments.
