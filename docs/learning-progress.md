@@ -6,9 +6,9 @@ exploration labs.
 ## Progress Summary
 
 - Total labs: 13
-- Completed: 5
+- Completed: 4
 - In progress: 0
-- Overall progress: 38%
+- Overall progress: 31%
 
 ## Lab Tracker
 
@@ -18,7 +18,7 @@ exploration labs.
 | 01 | Driver installation | Completed | 2026-08-15 | Verified in-kernel driver stack, firmware, USB binding and clean module reload |
 | 02 | Interface management | Completed | 2026-08-16 | Compared Linux Wi-Fi management layers and diagnosed an RF-kill-related re-enumeration sequence |
 | 03 | Channel scanning | Completed | 2026-08-17 | Compared NetworkManager and `iw` scans and created an anonymized reporting script |
-| 04 | RSSI experiments | Completed | 2026-08-17 | Developed and tested per-neighbour RSSI deviation and possible Sybil-correlation monitoring |
+| 04 | RSSI experiments | Not started | — | — |
 | 05 | Throughput testing | Not started | — | — |
 | 06 | Monitor mode | Not started | — | — |
 | 07 | 802.11s mesh | Not started | — | — |
@@ -76,24 +76,3 @@ SSID/BSSID roles, 2.4 GHz overlap, DFS channels, signal measurements and
 anonymized Markdown reports. Testing identified and corrected an RF-kill
 substring bug, an AWK portability issue and a channel-width interpretation
 issue. Timestamped reports are ignored while one reviewed sample is retained.
-
-
-### 2026-08-17 — Lab 04
-
-Developed a tutorial and Python monitoring tool for collecting RSSI measurements
-from every wireless neighbour reported by `iw station dump`. The tool maintains
-a rolling mean and calibration baseline independently for each neighbour and
-raises an anomaly when the mean deviation exceeds a configured threshold for
-multiple consecutive observations.
-
-The experiment also investigates a possible Sybil indicator by comparing
-time-aligned RSSI sequences belonging to different neighbour identities. An
-alert is raised only when two neighbours produce matching sequences across
-multiple consecutive windows. This is a heuristic rather than proof of an
-attack, because co-located devices, quantized RSSI readings and stable radio
-conditions can also create similar observations.
-
-Single-neighbour constant RSSI values are not treated as a Sybil indicator.
-The optional flatline detector is disabled by default. Fifteen unit tests
-verified the rolling-mean, deviation-alarm, anonymization, sequence-comparison
-and alarm-state logic.
