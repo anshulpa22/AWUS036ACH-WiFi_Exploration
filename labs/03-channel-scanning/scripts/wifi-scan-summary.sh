@@ -28,9 +28,7 @@ fi
 
 INTERFACE=$1
 
-for command in iw rfkill awk grep date mktemp dirname mkdir mv rm sudo; do
-    command -v "$command" >/dev/null 2>&1 ||
-        fail "required command not found: $command"
+for command in cat iw rfkill awk grep date mktemp dirname mkdir mv rm sudo; do
 done
 
 iw dev "$INTERFACE" info >/dev/null 2>&1 ||
