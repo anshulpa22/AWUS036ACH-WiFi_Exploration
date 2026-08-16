@@ -409,10 +409,10 @@ def main() -> int:
                     pair = (first, second)
                     observed_pairs.add(pair)
                     similar = sequences_match(
-                    states[first].history,
-                    states[second].history,
-                    args.sybil_window,
-                    args.sybil_tolerance,
+                        states[first].history,
+                        states[second].history,
+                        args.sybil_window,
+                        args.sybil_tolerance,
                     )
                     
 
