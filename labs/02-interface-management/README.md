@@ -359,7 +359,7 @@ All Wi-Fi software blocks were safely restored using:
 
 ```bash
 sudo rfkill unblock wifi
-nmcli radio wifi on
+sudo nmcli radio wifi on
 ```
 
 ### Evidence-based interpretation
