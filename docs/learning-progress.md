@@ -6,9 +6,9 @@ exploration labs.
 ## Progress Summary
 
 - Total labs: 13
-- Completed: 3
+- Completed: 4
 - In progress: 0
-- Overall progress: 23%
+- Overall progress: 31%
 
 ## Lab Tracker
 
@@ -17,7 +17,7 @@ exploration labs.
 | 00 | Hardware overview | Completed | 2026-08-15 | Identified RTL8812AU, USB 3.x link, rtw88 driver and supported modes |
 | 01 | Driver installation | Completed | 2026-08-15 | Verified in-kernel driver stack, firmware, USB binding and clean module reload |
 | 02 | Interface management | Completed | 2026-08-16 | Compared Linux Wi-Fi management layers and diagnosed an RF-kill-related re-enumeration sequence |
-| 03 | Channel scanning | Not started | — | — |
+| 03 | Channel scanning | Completed | 2026-08-17 | Compared NetworkManager and iw scans and created an anonymized reporting script |
 | 04 | RSSI experiments | Not started | — | — |
 | 05 | Throughput testing | Not started | — | — |
 | 06 | Monitor mode | Not started | — | — |
@@ -66,3 +66,13 @@ repeated USB re-enumeration; the adapter subsequently recovered and passed a
 timestamped 60-second stability observation. The internal adapter also
 demonstrated an intentional hybrid configuration containing an additional
 static IPv4 address alongside a DHCP address.
+
+### 2026-08-17 — Lab 03
+
+The AWUS036ACH completed high-level NetworkManager scans and lower-level `iw`
+scans without USB resets. The experiment examined active and passive discovery,
+SSID/BSSID roles, 2.4 GHz overlap, DFS channels, signal measurements and
+20/40/80 MHz operation. A reusable Bash script was developed to create
+anonymized Markdown reports. Testing identified and corrected an RF-kill
+substring bug, an AWK portability issue and a channel-width interpretation
+issue. Timestamped reports are ignored while one reviewed sample is retained.
