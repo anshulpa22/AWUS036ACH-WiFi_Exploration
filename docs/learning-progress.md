@@ -6,9 +6,9 @@ exploration labs.
 ## Progress Summary
 
 - Total labs: 13
-- Completed: 2
+- Completed: 3
 - In progress: 0
-- Overall progress: 15%
+- Overall progress: 23%
 
 ## Lab Tracker
 
@@ -16,7 +16,7 @@ exploration labs.
 |---|---|---|---|---|
 | 00 | Hardware overview | Completed | 2026-08-15 | Identified RTL8812AU, USB 3.x link, rtw88 driver and supported modes |
 | 01 | Driver installation | Completed | 2026-08-15 | Verified in-kernel driver stack, firmware, USB binding and clean module reload |
-| 02 | Interface management | Not started | — | — |
+| 02 | Interface management | Completed | 2026-08-16 | Compared Linux Wi-Fi management layers and diagnosed an RF-kill-related re-enumeration sequence |
 | 03 | Channel scanning | Not started | — | — |
 | 04 | RSSI experiments | Not started | — | — |
 | 05 | Throughput testing | Not started | — | — |
@@ -55,3 +55,14 @@ through firmware initialization. No conflicting Realtek DKMS module was
 installed. Firmware `52.14.0` initialized successfully, USB runtime autosuspend
 was disabled and the driver completed a controlled unload/reload test without
 affecting the internal Wi-Fi interface.
+
+### 2026-08-16 — Lab 02
+
+The Linux USB, driver, PHY, interface, NetworkManager, RF-kill and IP-routing
+layers were studied using the AWUS036ACH and the internal Intel adapter.
+Administrative state was shown to be independent of Wi-Fi association and
+NetworkManager ownership. A targeted RF-kill experiment was followed by
+repeated USB re-enumeration; the adapter subsequently recovered and passed a
+timestamped 60-second stability observation. The internal adapter also
+demonstrated an intentional hybrid configuration containing an additional
+static IPv4 address alongside a DHCP address.
