@@ -438,7 +438,7 @@ def main() -> int:
                             ),
                             args.anonymize,
                         )
-                        pair_active.add(pair)
+                        # pair_active is updated by update_pair_alarm_state()
 
                 for pair in list(pair_hits):
                     if pair not in observed_pairs:
