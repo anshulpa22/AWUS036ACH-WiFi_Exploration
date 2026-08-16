@@ -465,7 +465,7 @@ The script:
 3. Maps the interface to its PHY.
 4. Checks soft and hard RF-kill state.
 5. Reads the global regulatory country.
-6. stores raw scan data in a restricted temporary file.
+6. Stores raw scan data in a restricted temporary file.
 7. Parses scan results using AWK.
 8. Excludes SSIDs and BSSIDs.
 9. Generates an anonymized Markdown table.
