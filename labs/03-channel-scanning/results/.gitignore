@@ -1,0 +1,5 @@
+# Ignore timestamped reports generated during routine scans.
+scan-summary-*.md
+
+# Preserve one intentionally reviewed and anonymized example.
+!sample-scan-summary.md
