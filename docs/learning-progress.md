@@ -18,7 +18,7 @@ exploration labs.
 | 01 | Driver installation | Completed | 2026-08-15 | Verified in-kernel driver stack, firmware, USB binding and clean module reload |
 | 02 | Interface management | Completed | 2026-08-16 | Compared Linux Wi-Fi management layers and diagnosed an RF-kill-related re-enumeration sequence |
 | 03 | Channel scanning | Completed | 2026-08-17 | Compared NetworkManager and `iw` scans and created an anonymized reporting script |
-| 04 | RSSI experiments | Not started | 2026-08-17 | Developed and tested per-neighbour RSSI deviation and possible Sybil-correlation monitoring |
+| 04 | RSSI experiments | Completed | 2026-08-17 | Developed and tested per-neighbour RSSI deviation and possible Sybil-correlation monitoring |
 | 05 | Throughput testing | Not started | — | — |
 | 06 | Monitor mode | Not started | — | — |
 | 07 | 802.11s mesh | Not started | — | — |
