@@ -32,7 +32,7 @@ the Alfa Network AWUS036ACH USB Wi-Fi adapter.
 | 01 | Driver installation and verification | Completed |
 | 02 | Linux Wi-Fi interface management | Completed |
 | 03 | Channel scanning and network discovery | Completed |
-| 04 | RSSI measurement experiments | Not started |
+| 04 | RSSI measurement experiments | Completed |
 | 05 | TCP and UDP throughput testing | Not started |
 | 06 | Monitor mode and passive capture | Not started |
 | 07 | 802.11s mesh networking | Not started |
