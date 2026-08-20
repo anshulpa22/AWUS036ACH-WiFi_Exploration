@@ -6,9 +6,9 @@ exploration labs.
 ## Progress Summary
 
 - Total labs: 13
-- Completed: 5
+- Completed: 6
 - In progress: 0
-- Overall progress: 38%
+- Overall progress: 46%
 
 ## Lab Tracker
 
@@ -20,7 +20,7 @@ exploration labs.
 | 03 | Channel scanning | Completed | 2026-08-17 | Compared NetworkManager and `iw` scans and created an anonymized reporting script |
 | 04 | RSSI experiments | Completed | 2026-08-17 | Developed and tested per-neighbour RSSI deviation and possible Sybil-correlation monitoring |
 | 05 | Throughput testing | Not started | — | — |
-| 06 | Monitor mode | Not started | — | — |
+| 06 | Monitor mode | Completed | 2026-08-20 | Captured anonymized 802.11 management-frame metadata and implemented automatic interface restoration |
 | 07 | 802.11s mesh | Not started | — | — |
 | 08 | BATMAN-adv | Not started | — | — |
 | 09 | Long-range testing | Not started | — | — |
@@ -97,3 +97,27 @@ Single-neighbour constant RSSI values are not treated as a Sybil indicator.
 The optional flatline detector is disabled by default. Fifteen unit tests
 verified the rolling-mean, deviation-alarm, anonymization, sequence-comparison
 and alarm-state logic.
+
+
+### 2026-08-20 — Lab 06
+
+Configured the AWUS036ACH for passive IEEE 802.11 monitor-mode observation
+while the internal Wi-Fi adapter maintained normal connectivity. The experiment
+captured beacon, probe-request and probe-response metadata on channel 1 without
+retaining SSIDs, BSSIDs, station addresses, payloads or raw packet captures.
+
+The `rtw88_8812au` driver returned `Device or resource busy` when the channel
+was configured while the newly converted monitor interface was down. Testing
+established a reliable driver-specific sequence: change the interface type,
+bring it up and then configure the channel.
+
+A reusable Bash script was developed to validate the interface, regulatory
+domain and monitor-mode capability; capture privacy-safe metadata; generate an
+anonymized Markdown report; and restore managed mode and NetworkManager
+ownership after success, failure or interruption.
+
+The reviewed 10-second sample contained 259 management frames. Radiotap
+reported multiple RSSI chain values, so the parser selected the first valid
+negative value per frame. The aggregate mean was -38.03 dBm, but this value
+combines multiple transmitters and must not be interpreted as one access
+point's link quality.
