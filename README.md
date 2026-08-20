@@ -34,7 +34,7 @@ the Alfa Network AWUS036ACH USB Wi-Fi adapter.
 | 03 | Channel scanning and network discovery | Completed |
 | 04 | RSSI measurement experiments | Completed |
 | 05 | TCP and UDP throughput testing | Not started |
-| 06 | Monitor mode and passive capture | Not started |
+| 06 | Monitor mode and passive capture | Completed |
 | 07 | 802.11s mesh networking | Not started |
 | 08 | BATMAN-adv Layer-2 mesh | Not started |
 | 09 | Long-range Wi-Fi testing | Not started |

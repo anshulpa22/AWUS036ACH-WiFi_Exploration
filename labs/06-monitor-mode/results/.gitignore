@@ -1,0 +1,5 @@
+# Ignore generated monitor-mode reports.
+monitor-summary-*.md
+
+# Permit a deliberately reviewed anonymized example.
+!sample-monitor-summary.md
